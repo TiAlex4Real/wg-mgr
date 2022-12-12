@@ -1,0 +1,13 @@
+# $client_name
+# https://www.wireguard.com
+[Interface]
+Address = $client_address
+DNS = $dns
+MTU = $mtu
+PrivateKey = $client_private_key
+[Peer]
+AllowedIPs = $client_allowed_ips
+Endpoint = $server_ext_address:$server_port
+PersistentKeepalive = $keepalive
+PresharedKey = $client_preshared_key
+PublicKey = $server_public_key

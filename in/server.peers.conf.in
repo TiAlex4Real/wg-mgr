@@ -1,0 +1,6 @@
+# $client_name
+[Peer]
+PublicKey = $client_public_key
+PresharedKey = $client_preshared_key
+AllowedIPs = $client_address
+

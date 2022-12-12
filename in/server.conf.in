@@ -1,0 +1,9 @@
+[Interface]
+Address = $server_address
+ListenPort = $server_port
+MTU = $mtu
+PrivateKey = $server_private_key
+PostUp = sysctl --write net.ipv4.ip_forward=1; nft add table inet $wireguard_interface; nft add chain inet $wireguard_interface PREROUTING {type nat hook prerouting priority 0\;}; nft add chain inet $wireguard_interface POSTROUTING {type nat hook postrouting priority 100\;}; nft add rule inet $wireguard_interface POSTROUTING ip saddr $server_address oifname $server_interface masquerade
+PostDown = sysctl --write net.ipv4.ip_forward=0; nft delete table inet $wireguard_interface
+SaveConfig = false
+

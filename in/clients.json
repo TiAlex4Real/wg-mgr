@@ -1,0 +1,16 @@
+[
+    {
+    "client_name": "client1",
+    "client_address": "10.8.0.2/32",
+    "client_preshared_key": "",
+    "client_private_key": "",
+    "client_public_key": ""
+    },
+    {
+    "client_name": "client2",
+    "client_address": "10.8.0.3/32",
+    "client_preshared_key": "",
+    "client_private_key": "",
+    "client_public_key": ""
+    }
+]
